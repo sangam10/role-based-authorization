@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IdentityRole
+@{
+    ViewData["Title"] = "Create Role";
+}
+
+<h1>Create Role for User</h1>
+<a asp-action="Index">All Roles</a>
+<hr />
+<form method="post" asp-action="Create">
+    <h2>Create Role</h2>
+    <hr />
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <label asp-for="Name"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <button type="submit" class="btn btn-outline-success">Submit</button>
+</form>
+
